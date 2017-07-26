@@ -85,7 +85,7 @@
 							class="glyphicon glyphicon-user"></i></span>
 
 						<form:input placeholder="User Name" class="loginTextbox"
-							id="login_id" path="loginId" required="required" />
+							id="login_id" path="userName" required="required" />
 
 					</div>
 

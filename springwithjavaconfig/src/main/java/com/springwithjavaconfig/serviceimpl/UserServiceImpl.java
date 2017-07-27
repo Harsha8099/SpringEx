@@ -23,9 +23,9 @@ public class UserServiceImpl implements UserService {
 		userDaoInterface.saveEmployee(user);
 	}
 
-	public List<User> findAllEmployees() {
+	public List<User> findUsers() {
 		// TODO Auto-generated method stub
-		return userDaoInterface.findAllEmployees();
+		return userDaoInterface.findUsers();
 	}
 
 }

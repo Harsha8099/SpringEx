@@ -16,7 +16,7 @@ public class UserDaoImpl extends UserDao implements UserDaoInterface{
 		persist(user);
 	}
 
-	public List<User> findAllEmployees() {
+	public List<User> findUsers() {
 		// TODO Auto-generated method stub
 		//return null;
 		Criteria criteria = getSession().createCriteria(User.class);

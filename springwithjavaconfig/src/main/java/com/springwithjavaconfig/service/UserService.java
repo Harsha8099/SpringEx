@@ -11,6 +11,6 @@ import com.springwithjavaconfig.model.User;
 public interface UserService {
 	void saveEmployee(User user);
 
-	List<User> findAllEmployees();
+	List<User> findUsers();
 
 }

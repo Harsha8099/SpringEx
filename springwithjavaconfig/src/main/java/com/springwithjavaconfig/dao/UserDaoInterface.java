@@ -9,7 +9,7 @@ import com.springwithjavaconfig.model.User;
 public interface UserDaoInterface {
 	void saveEmployee(User user);
     
-    List<User> findAllEmployees();
+    List<User> findUsers();
      
     void deleteEmployeeBySsn(String ssn);
 }

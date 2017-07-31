@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Welcome to the Client Page...:)</h1>
+<%-- <h1>${file.originalFilename}</h1> --%>
 </body>
 </html>

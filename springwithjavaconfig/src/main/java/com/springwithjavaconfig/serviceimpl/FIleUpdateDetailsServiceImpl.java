@@ -1,5 +1,7 @@
 package com.springwithjavaconfig.serviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,12 @@ public class FIleUpdateDetailsServiceImpl implements FIleUpdateDetailsService{
 	public void saveFileUpdateDetails(FIleUpdateDetails fIleUpdateDetails) {
 		// TODO Auto-generated method stub
 		fileUpdateDetailsDaoInterface.saveFileUpdateDetails(fIleUpdateDetails);
+	}
+
+	@Override
+	public List findEmployees() {
+		// TODO Auto-generated method stub
+		return fileUpdateDetailsDaoInterface.retreiveEmployees();
 	}
 
 }

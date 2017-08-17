@@ -48,7 +48,7 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/fileupload", method = RequestMethod.POST)
-	public String submit(@RequestParam("file") CommonsMultipartFile file, ModelMap modelMap,HttpSession session) throws Exception {
+	public ModelAndView submit(@RequestParam("file") CommonsMultipartFile file, ModelMap modelMap,HttpSession session) throws Exception {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -77,7 +77,7 @@ public class MainController {
                 		fIleUpdateDetails.setSchholYearName(columns[14]);
                 		fIleUpdateDetails.setPrimaryEducationLevelName(columns[15]);
                 	}
-                	fileUpdatedDetailsService.saveFileUpdateDetails(fIleUpdateDetails);
+                	//fileUpdatedDetailsService.saveFileUpdateDetails(fIleUpdateDetails);
                 }
                 
                 
@@ -85,9 +85,12 @@ public class MainController {
             	System.out.println(e);
             }
             }
+        List list = fileUpdatedDetailsService.findEmployees();
+        System.out.println("List Size is:"+list.size());
         
-		modelMap.addAttribute("file", file);
-		return "welcome1";
+        ModelAndView modelAndView= new ModelAndView("welcome1");
+        modelAndView.addObject("msg1", "Good Morning");
+        modelAndView.addObject("list", list);
+        return modelAndView;
 	}
-
 }

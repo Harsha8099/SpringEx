@@ -30,13 +30,15 @@
 <form:form method="POST" action="/springwithjavaconfig/fileupload" enctype="multipart/form-data" modelAttribute="filePath">
     <table>
         <tr>
-            <td><form:label path="file">Select a file to upload</form:label></td>
+            <td><form:label path="file">Select a file to upload</form:label>${message } </td>
             <td><input type="file" name="file"/></td>
         </tr>
         <tr>
             <td><input type="submit" value="Submit" /></td>
+            
         </tr>
     </table>
+    
 </form:form>
 
 <!-- <h1>Welcome to Admin Page...:)</h1> -->
